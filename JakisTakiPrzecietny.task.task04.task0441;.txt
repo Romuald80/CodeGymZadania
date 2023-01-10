@@ -1,0 +1,23 @@
+package pl.codegym.task.task04.task0441;
+
+/* 
+Jakiś taki przeciętny
+*/
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> lista = new ArrayList<>(3);
+        int[] tablica = new int[3];
+        for (int i=0;i<tablica.length;i++){
+            int element;
+            lista.add(tablica[i] = scan.nextInt());
+        }
+        Collections.sort(lista);
+        System.out.println(lista.get(1));
+    }
+}

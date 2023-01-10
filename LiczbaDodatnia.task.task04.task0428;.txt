@@ -1,0 +1,28 @@
+package pl.codegym.task.task04.task0428;
+
+/* 
+Liczba dodatnia
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();
+        String l2 = reader.readLine();
+        String l3 = reader.readLine();
+        int a = Integer.parseInt(l1);
+        int b = Integer.parseInt(l2);
+        int c = Integer.parseInt(l3);
+        int d = 0; // zmienna pomocnicza
+
+         if(a > 0)d++; // jesli a jest dodatnie zwieksz d o 1.
+         if(b > 0)d++;
+         if(c > 0)d++;
+             System.out.println(d);
+         }
+
+
+    }
+

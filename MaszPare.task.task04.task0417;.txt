@@ -1,0 +1,32 @@
+package pl.codegym.task.task04.task0417;
+
+/* 
+Masz parę? // program wyświetla jednakowe piczby wprowadzone przez użytkownika.
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String a = reader.readLine();
+        String b = reader.readLine();
+        String c = reader.readLine();
+
+        int d = Integer.parseInt(a);
+        int e = Integer.parseInt(b);
+        int f = Integer.parseInt(c);
+
+        if(d==e && e==f) {
+            System.out.println(d + " " + e + " " + f);
+        }else if(d == e && d !=f){
+            System.out.println(d + " " + e);
+        }else if(d == f && f != e){
+            System.out.println(d + " " + f);
+        }else if(e == f && f != d){
+            System.out.println(e + " " + f);
+        }
+
+        }
+    }

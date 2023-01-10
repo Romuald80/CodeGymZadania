@@ -1,0 +1,31 @@
+package pl.codegym.task.task04.task0426;
+
+/* 
+Etykiety i liczby
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();// Wczytwani tekstu z klawiatury.
+        int a = Integer.parseInt(l1); // Wszytywanie liczby.
+
+        if(a < 0 && a % 2 == 0){// Jęśli liczba jest mniejsza od zera oraz reszta z dzielenia przez "2" = 0
+            System.out.println("Ujemna liczba parzysta");// to wyświetl "text".
+        }
+        else if(a < 0 && a % 2 != 0){// W przeciwnym wypadku jeśli liczba jest mniejsza od zera oraz reszta z dzielenia przez "2" jest różny od zera.
+            System.out.println("Ujemna liczba nieparzysta");
+        }
+        else if(a > 0 && a % 2 == 0){
+            System.out.println("Dodatnia liczba parzysta");
+        }
+        else if(a > 0 && a % 2 != 0){
+            System.out.println("Dodatnia liczba nieparzysta");
+        }
+        else{
+            System.out.println("Zero");
+        }
+    }
+}

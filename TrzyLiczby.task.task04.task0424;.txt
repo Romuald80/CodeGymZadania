@@ -1,0 +1,34 @@
+package pl.codegym.task.task04.task0424;
+
+/* 
+Trzy liczby
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();
+        String l2 = reader.readLine();
+        String l3 = reader.readLine();
+
+        int a = Integer.parseInt(l1);
+        int b = Integer.parseInt(l2);
+        int c = Integer.parseInt(l3);
+
+        if(a == b && b != c){ // jeśli pierwsza liczna jest rowna drugiej wyśwoetl cyfrę 3.
+            System.out.println("3");
+        }
+        else if(a == c && b != c){ // jeśli pierwsza liczna jest rowna drugiej wyśwoetl cyfrę 2.
+            System.out.println("2");
+        }
+        else if(b == c && c !=a){ // jeśli pierwsza liczna jest rowna drugiej wyśwoetl cyfrę 1.
+            System.out.println("1");
+        }
+        else{ // w pozostałych przypadkach nic nie wyświetlaj.
+            return;
+        }
+    }
+}

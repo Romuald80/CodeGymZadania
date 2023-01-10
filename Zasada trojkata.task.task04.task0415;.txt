@@ -1,0 +1,30 @@
+package pl.codegym.task.task04.task0415;
+
+
+
+/* 
+Zasada trójkąta
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        //System.out.println("Podaj trzy długosci bokow trojkata : ");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();
+        String l2 = reader.readLine();
+        String l3 = reader.readLine();
+        int a = Integer.parseInt(l1);
+        int b = Integer.parseInt(l2);
+        int c = Integer.parseInt(l3);
+
+         if (a+b>c && a+c>b && b+c>a){	// && operator definiuje "oraz" - czyli wszyskie warunki musza byc spwlnione
+            System.out.println("Da się zbudować trójkąt.");
+        }
+        else{
+            System.out.println("Nie da się zbudować trójkąta.");
+        }
+    }
+}

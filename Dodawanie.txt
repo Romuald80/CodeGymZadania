@@ -1,0 +1,29 @@
+package pl.codegym.task.task04.task0442;
+
+
+/* 
+Dodawanie 
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        int suma = 0;
+        while(true) {
+            int digit = Integer.parseInt(reader.readLine());// wczytywnie z klawiatury liczb do momentu gdy -1
+            suma += digit;
+
+            if (digit == -1) {
+                System.out.println(suma);
+                break;
+            }
+        }
+
+
+
+    }
+}

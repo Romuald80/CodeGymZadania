@@ -1,0 +1,18 @@
+package pl.codegym.task.task04.task0437;
+
+
+/* 
+Trójkąt z ósemek
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        for(int i = 0;i < 10;i++) {
+            for (int j = 0; j < i; j++) { // zagnieżdzona pętla w pętli for zwieksza ilość wyświetalnych ósemek w
+                System.out.print(8); // kazdym kolejnym wierszu
+            }
+            System.out.println();
+        }
+    }
+}

@@ -1,0 +1,99 @@
+public class Car {
+
+   String model;
+   int maxSpeed;
+
+   public static void main(String[] args) {
+
+       Car car1 = new Car();
+       car1.model = "Ferrari";
+       car1.maxSpeed = 300;
+
+       Car car2 = new Car();
+       car2.model = "Ferrari";
+       car2.maxSpeed = 300;
+
+       System.out.println(car1 == car2); // porownanie dwoch roznych referencji do 2 identycznych obiektow
+   }
+}
+WYJSCIE Z KONSOLI : false
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class Man {
+
+   int geneticCode; // porownywanie kodu genetycznego
+
+   public static void main(String[] args) {
+
+       Man man1 = new Man();
+       man1.geneticCode = 1111222233;
+
+       Man man2 = new Man();
+       man2.geneticCode = 1111222233;
+
+       System.out.println(man1 == man2); // operator porownania == mimo, ze nasz kod genetyczny jest identyczny zwraca falsz
+   }
+}	Console output: false // wyjscie z konsoli falsz
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class Man {
+
+   String geneticCode;
+
+   public static void main(String[] args) {
+
+       Man man1 = new Man();
+       man1.geneticCode = "111122223333";
+
+       Man man2 = new Man();
+       man2.geneticCode = "111122223333";
+
+       System.out.println(man1.equals(man2)); // operator "equals" nie zmienia zachowanie naszego programu ponieważ wciaz porownujemy rozne referencje
+   }
+}	Console output: false // wyjscie z konsoli falsz
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+public class Man {
+
+   int dnaCode; // zmienna instancji
+
+   public boolean equals(Man man) {
+       return this.dnaCode ==  man.dnaCode; // zwraca zmienna instancji
+
+   }
+
+   public static void main(String[] args) {
+
+       Man man1 = new Man();
+       man1.dnaCode = 1111222233;
+
+       Man man2 = new Man();
+       man2.dnaCode = 1111222233;
+
+       System.out.println(man1.equals(man2));
+
+   }
+
+}	Console output:true // wyjscie z konsoli true
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+POROWNANIE STRINGOW
+public class Main {
+
+   public static void main(String[] args) {
+
+       String s1 = "CodeGym is the best website for learning Java!";
+       String s2 = new String("CodeGym is the best website for learning Java!");
+       System.out.println(s1 == s2); // porownanie referencji String, 
+   }
+
+}	Console output: false // wyjscie z konsoli falsz //dalczego porownanie tego samego String daje false? Bo ref. maja roznew adresy w pamieci
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+
+   public static void main(String[] args) {
+
+       String s1 = "CodeGym is the best website for learning Java!";
+       String s2 = "CodeGym is the best website for learning Java!";
+       System.out.println(s1 == s2); // ten operator porownuje adresy pamieci, wiec zawsze to bezie prawda
+   }
+
+}	Console output: true // wyjscie z konsoli prawda
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

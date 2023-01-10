@@ -1,0 +1,44 @@
+package pl.codegym.task.task04.task0414;
+
+/* 
+Liczba dni w roku
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //tutaj wpisz swój kod
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String a = reader.readLine();
+        int b = Integer.parseInt(a);
+        
+        if(b%400 ==0)        // jesli jest podzielny przez liczbe 400 bez reszty jest to rok przestępny.
+        {
+            System.out.println("Liczba dni w roku: 366");
+        }
+        else if(b%100 == 0)    //2) dla pozostałych lat podzielnych przez 100, rok jest zwyczajny;
+        {
+            System.out.println("Liczba dni w roku: 365");
+        }
+        else if(b%4 == 0){    //3) dla pozostałych lat podzielnych przez 4, rok jest przestępny;
+            System.out.println("Liczba dni w roku: 366");
+        }
+        else{  //4) wszystkie pozostałe lata nie są przestępne.
+		Zatem lata 1700, 1800 i 1900 nie są przestępne, ponieważ są podzielne przez 100, ale nie przez 400.
+		Lata 1600 i 2000 są przestępne, ponieważ są podzielne przez 100 oraz przez 400.
+		Lata 2100, 2200 i 2300 nie są przestępne.
+            System.out.println("Liczba dni w roku: 365");
+        }
+
+    }
+}
+Wskazówka:
+Rok przestępny ma 366 dni, a zwyczajny rok 365 dni.
+1) jeśli rok jest podzielny przez 400, to jest to rok przestępny;
+2) dla pozostałych lat podzielnych przez 100, rok jest zwyczajny;
+3) dla pozostałych lat podzielnych przez 4, rok jest przestępny;
+4) wszystkie pozostałe lata nie są przestępne.
+Zatem lata 1700, 1800 i 1900 nie są przestępne, ponieważ są podzielne przez 100, ale nie przez 400.
+Lata 1600 i 2000 są przestępne, ponieważ są podzielne przez 100 oraz przez 400.
+Lata 2100, 2200 i 2300 nie są przestępne.

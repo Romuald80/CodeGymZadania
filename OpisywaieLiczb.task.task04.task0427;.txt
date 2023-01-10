@@ -1,0 +1,38 @@
+package pl.codegym.task.task04.task0427;
+
+/* 
+Opisywanie liczb
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();
+        int a = Integer.parseInt(l1);
+        if(a > 0 && a < 1000){
+            if (a % 2 == 0 && a<10) {// Parzysta liczna jednocyfrowa
+                System.out.println("parzysta liczba jednocyfrowa");
+            }
+            else if(a % 2 != 0 && a<10){ // Nieparzysta liczba jednocyfrowa.
+                System.out.println("nieparzysta liczba jednocyfrowa");
+            }
+            else if (a % 2 == 0 && a>=10 && a<100){ //Parzysta liczba dwucyfrowa.
+                System.out.println("parzysta liczba dwucyfrowa");
+            }
+            else if (a % 2 != 0 && a>=10 && a<100){ // Nieparzysta liczba dwucyfrowa
+                System.out.println("nieparzysta liczba dwucyfrowa");
+            }
+            else if (a % 2 == 0 && a>=100){
+                System.out.println("parzysta liczba trzycyfrowa");
+            }
+            else if (a % 2 != 0 && a>=100){ // Nieparzysta liczba trzycyfrowa.
+                System.out.println("nieparzysta liczba trzycyfrowa");
+            }
+
+        }else{
+            return;
+        }
+    }
+}
