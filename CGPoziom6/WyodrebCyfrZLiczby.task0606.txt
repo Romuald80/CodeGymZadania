@@ -1,0 +1,84 @@
+.task.task06.task0606;
+
+
+
+*************************************** WERSJA ROZPISANA *************************************** 
+int liczba = 1234567890; 
+String napis = String.valueOf(liczba); 
+int suma = 0; 
+int ileCyfr = napis.length();
+for (int i = 0; i<ileCyfr; i++) 
+{ 
+    char znak = napis.charAt(i); 
+    int cyfra = Character.getNumericValue( znak ); 
+    suma = suma + cyfra; 
+} 
+System.out.println("Suma wszystkich cyfr to: "+suma);
+
+Oczywiście można to było napisać bardziej zwięźle, jednak specjalnie rozpisałem każdą operację na oddzielną linijkę, aby zachować przejrzystość oraz móc to analizować krok po kroku.
+
+W pierwszej linii tworzę zmienną liczba o wartości 1234567890. Jest to zmienna typu int, czyli liczba całkowita (ang. integer). Może być ona oczywiście wczytana z pliku albo z konsoli 
+tekstowej. Dla uproszczenia programu, jest ona zaszyta bezpośrednio w kodzie.
+Następnie przerabiam tę liczbę na obiekt typu String. W Jawie String jest typem obiektowym, a nie tablicowym (jak np. w C++), dlatego klasa String posiada metody statyczne,
+ które można tu użyć. Jedną z metod jest valueOf(), która pobiera wartość liczbową i zamienia na tekst.
+W trzeciej linii zakładam, że suma cyfr będzie na początku wynosiła 0, aby potem do tej sumy dokładać kolejne cyfry.
+W czwartej linii badam długość napisu. Jak wspomniałem, String w Jawie jest klasą. Więc zmienna napis będzie zmienną obiektową klasy String. Dzięki temu znajduję w niej metodę
+ length(), która podaje długość. W omawianym przypadku długość ta wynosi 10, gdyż mamy 10 cyfry w 
+liczbie zamienionej w napis.
+Piata linia rozpoczyna pętlę for, która będzie klasycznie badała znak po znaku z mojego tekstu, a następnie przerabiała go na cyfrę i dodawała do sumy. Kluczowe w tej pętli 
+jest to, aby nie dochodziła ona do wartości ileCyfr (10), gdyż cyfr jest właśnie tyle, ale są numerowane od 0. 
+Czyli dla 10 cyfr, pętla powinna iterować po wartościach 0,1,2,3,4,6,7,8,9 i nie osiągać już wartości 10.
+Początek bloku pętli. Można go było zapisać na końcu linii 5, w zależności od stylu programowania.
+Jak wspomniałem, String w Jawie jest klasą. Więc zmienna napis będzie zmienną obiektową klasy String. Dzięki temu znajduję w niej metodę charAt(…), która wyciąga z 
+całego napisu znak o podanym numerze. Skoro więc pętla for zmienia i od 0 do ileCyfr, to w takim razie otrzymam kolejne 
+znaki ze Stringa i każdy z tych znaków przypisuję do zmiennej typu char czyli character. Jest to typ prosty, nieobiektowy, który ma przechowywać po prostu 1 znak.
+Korzystam z tego, że w Jawie istnieje klasa Character, która ma statyczną metodę getNumericValue(…), która zamienia znak na liczbę int.
+W każdym przebiegu pętli zwiększam sumę (wynoszącą początkowo 0) o wartość kolejnej odczytanej cyfry. Zapis suma = suma + cyframożna zapisać krócej: suma += cyfra. Jest to dokładnie ta sama operacja.
+Tu kończy się pętla
+I w jedenastej linii pozostaje kosmetyka, czyli wypisanie na konsoli wartości sumy, żeby sprawdzić czy mój algorytm zadziałał.
+
+*************************************** WERSJA SKRUCOINA ***************************************
+String napis = String.valueOf(1234567890);// zamiana liczby na String(String to klasa)
+int suma = 0; // przypisanie wartosci zero do zmiennej 
+for (int i = 0; i<napis.length(); i++) { // pętla analizuje kolejne znaki ciagu String
+    suma += Character.getNumericValue( napis.charAt(i) );
+}
+System.out.println("Suma wszystkich cyfr to: "+suma);
+
+package pl.codegym.task.task06.task0606;// Rozwiązanie zadania
+
+import java.io.*;
+
+/* 
+Cyfry parzyste i nieparzyste
+*/
+
+public class Solution {
+
+    public static int parzyste;
+    public static int nieparzyste;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String l1 = reader.readLine();
+        int liczba = Integer.parseInt(l1);
+        String napis = String.valueOf(liczba);
+        //int suma = 0
+        int ileCyfr = napis.length();
+
+        for(int i = 0;i < ileCyfr;i++) {
+
+            char znak = napis.charAt(i);
+            int cyfra = Character.getNumericValue(znak);
+            if (cyfra % 2 == 0) {
+                parzyste++;
+            } else {
+                nieparzyste++;
+            }
+        }
+        int a = parzyste;
+        int b = nieparzyste;
+
+        System.out.println("Parzyste: " + a +" " +"Nieparzyste: " + b);
+    }
+}

@@ -1,0 +1,2 @@
+append (StringBuffer sb)
+Dołącza określony StringBuffer do tej sekwencji.

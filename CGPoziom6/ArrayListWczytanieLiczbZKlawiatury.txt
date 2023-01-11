@@ -1,0 +1,12 @@
+public static void main(String[] args) throws IOException
+{
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in) );
+    ArrayList&ltInteger&gt lista = new ArrayList&ltInteger&gt(); //inicjalizowanie listy
+
+    while (true) 			// pętla powtarza wczytywanie dopuki...
+    {
+        String s = reader.readLine();
+        if (s.isEmpty()) break;   	//znak s nie jest pusty wtedy koniec pętli.
+        lista.add(Integer.parseInt(s));	//wczyta sie ostatni znak
+    }
+}

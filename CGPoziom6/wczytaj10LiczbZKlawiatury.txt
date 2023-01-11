@@ -1,0 +1,15 @@
+nw//Wczytaj 10 liczb z klawiatury
+public class MainClass
+{
+  public static void main(String[] args) throws IOException
+  {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    int[] lista = new int[10];
+
+    for (int i = 0; i < lista.length; i++)
+    {
+      String s = reader.readLine();
+      lista[i] = Integer.parseInt(s);
+    }
+  }
+}
