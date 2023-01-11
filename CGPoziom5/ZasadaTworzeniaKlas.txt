@@ -1,0 +1,13 @@
+– Zasadniczo, klasa jest tworzona w ten sposób:
+
+1. Programista decyduje, jakich jeszcze obiektów potrzebuje.
+
+2. Programista dzieli te obiekty na różne typy w zależności od tego, co one mają robić.
+
+3. Programista pisze osobną klasę dla każdego typu.
+
+4. W klasie deklaruje potrzebne metody i zmienne.
+
+5. W każdej metodzie pisze komendy tak, aby metoda robiła to, co on chce.
+
+6. Klasa jest gotowa. Możesz teraz utworzyć obiekty klasy.

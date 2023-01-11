@@ -1,0 +1,14 @@
+
+
+
+class Kot {
+    public String imie; 	// imie zmiennej instancji. Ma ona modyfikator dostępu publicznego, który widoczny jest wyłącznie w projekcie.
+
+public String getImie() { 	// Metoa getImie jest getterem. Zwraca wartość zmiennej instancji imie.
+        return imie; 		// Nazwa metody pochodzi od słowa "get" i nazwy zmiennej, która pisana jest wielką literą.
+    }
+
+public void setImie(String imie) { //Metoda setImie jest setterem. Jest używana aby przypisać do zmiennej instancji nową zmienną imie.
+        this.imie = imie; 	// Nazwa metody pochodzi od słowa "set" i nazwy zmiennej, którą pisana jest wielką literą. W tej metodzie parametr ma 
+    } 			//ma tą samą nazwe, co zmienna instancji, wiąc poprzedzamy nazwę zmiennej instancji słowem this.
+}

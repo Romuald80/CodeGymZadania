@@ -1,0 +1,42 @@
+package pl.codegym.task.task05.task0520;
+
+/* 
+Utwórz klasę Prostokat
+*/
+
+public class Prostokat {
+    //tutaj wpisz swój kod
+    private int gora;
+    private int lewy;
+    private int szerokosc;
+    private int wysokosc;
+
+    public Prostokat(int gora, int lewy, int szerokosc, int wysokosc){
+        this.gora = gora;
+        this.lewy = lewy;
+        this.szerokosc = szerokosc;
+        this.wysokosc = wysokosc;
+    }
+    public Prostokat(int gora, int lewy){
+        this.gora = gora;
+        this.lewy = lewy;
+        this.szerokosc = 0;
+        this.wysokosc = 0;
+    }
+    public Prostokat(int gora, int lewy, int szerokosc){
+        this.gora = gora;
+        this.lewy = lewy;
+        this.szerokosc = szerokosc;
+        this.wysokosc = szerokosc;
+    }
+    public Prostokat(Prostokat rectangle){
+        this.gora = rectangle.gora;
+        this.lewy = rectangle.lewy;
+        this.szerokosc = rectangle.szerokosc;
+        this.wysokosc = rectangle.wysokosc;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}

@@ -1,0 +1,8 @@
+JAK TWORZYC OBIEKTY PRZYKŁADY:
+
+Kot kot = new Kot();
+
+Reader reader = new BufferedReader(new InputStreamReader(System.in));
+
+InputStream is = new FileInputStream(path);
+
